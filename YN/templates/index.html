@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat App</title>
+        <link rel="icon" href="./img/favicon.png">
+        <link rel="icon" href="data:,">
+        <link rel="stylesheet"  href="{{ url_for('static', filename='/styles.min.css') }}">
+        <link rel="stylesheet"  href="{{ url_for('static', filename='/styles.css') }}">
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js" integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ==" crossorigin="anonymous"></script>
+    <link rel="icon" href="data:,">  
+    </head>
+    <body>
+        <div class="centered-form">
+            <div class="centered-form__box">
+                <h1>Join</h1>
+                <form action="/test"  id="broadcast" method="POST" >
+                    <label>Display name</label>
+                    <input type="text" name="username" placeholder="Display name" required>
+                    <label>Room</label>
+                    <input type="text" name="room" placeholder="Room" required>
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+
+    </body>
+    <script type="text/javascript" charset="utf-8">
+
+        $(document).ready(function(){
+    
+        var socket = io();
+    
+        
+        
+        $('form#broadcast').submit(function(event) {
+            socket.emit('order', {data: "olo",room:"ollle"} );
+            return true;
+        });
+    
+        socket.on('join', function(msg) {
+            console.log(msg.data)
+            socket.emit('order', {data: "connected",room:"order"} );
+            return false
+        })
+    
+        socket.on('disconnect',()=>{
+            socket.close()
+        })
+        
+        $("#disconnect").click(function() {
+            console.log(socket.id)
+            $('#log').append('<p>Received: ' + "disconnected" + '</p>');
+            socket.close()
+            return false;
+        });
+    
+    })
+            
+    </script>
+
+</html>

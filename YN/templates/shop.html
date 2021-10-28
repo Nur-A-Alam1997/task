@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Shopping Cart</title>
+</head>
+<style>
+    .btn-add-cart {
+        position: absolute;
+        left: 15px;
+        top: 0px;
+    }
+
+    .container {
+        max-height: 460px;
+        /*example*/
+        overflow: auto;
+        /* auto , scroll .. */
+    }
+</style>
+<!-- <div class="brick">
+    <div class="content">
+        <div class="color" style="color: brown;">
+            <div class="palette" style="background: burlywood;">
+                <h1>{name}</h1>
+                <div class="BADGE col col-sm-9 col-xs-6" id=genOffer data-min="4" data-get="1">
+                    <label>OFFER : Buying any 4 products 1 is free</label>
+                </div>
+            </div>
+        </div>
+        <div class="action">
+            <p>$ {price}</p>
+            <button class="buyButton" onClick="">
+                Offer!!!
+            </button>
+        </div>
+    </div>
+</div> -->
+
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    My Shopping Cart
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="BADGE col col-sm-9 col-xs-6" id=genOffer data-min="4" data-get="1">
+        <label>OFFER : Buying any 4 products 1 is free</label>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-sm-9 col-xs-6">
+                <h1>Products</h1>
+                <div class="row">
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container' data-id="1">
+                            <img src="http://lorempixel.com/250/250/food/1">
+                        </div>
+                        <h2>ProductOlw</h2>
+                        <p>Product howo</p>
+
+                        <h5 id=itemOffer-1 data-min="3" data-get="1">1 in every four</h5>
+
+                        <p>$10.99</p>
+                    </div>
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container' data-id="2">
+                            <img src="http://lorempixel.com/250/250/food/2">
+                        </div>
+                        <h2>Productcope</h2>
+                        <p>Product lolo</p>
+                        <h5 id=itemOffer-1 data-min="3" data-get="1">1 in every four</h5>
+                        <p>$10.99</p>
+                    </div>
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container' data-id="3">
+                            <img src="http://lorempixel.com/250/250/food/3">
+                        </div>
+                        <h2>ProductName</h2>
+                        <p>Product Name</p>
+                        <h5 id=itemOffer-1 data-min="3" data-get="1">1 in every four</h5>
+                        <p>$10.99</p>
+                    </div>
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container'>
+                            <img src="http://lorempixel.com/250/250/food/4">
+                        </div>
+                        <h2>Product Name</h2>
+                        <p>Product Name</p>
+                        <p>$10.99</p>
+                    </div>
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container'>
+                            <img src="http://lorempixel.com/250/250/food/2">
+                        </div>
+                        <h2>Product Name</h2>
+                        <p>Product Name</p>
+                        <p>$10.99</p>
+                    </div>
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container'>
+                            <img src="http://lorempixel.com/250/250/food/1">
+                        </div>
+                        <h2>Product Name</h2>
+                        <p>Product Name</p>
+                        <p>$10.99</p>
+                    </div>
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container'>
+                            <img src="http://lorempixel.com/250/250/food/4">
+                        </div>
+                        <h2>Product Name</h2>
+                        <p>Product Name</p>
+                        <p>$10.99</p>
+                    </div>
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container'>
+                            <img src="http://lorempixel.com/250/250/food/5">
+                        </div>
+                        <h2>Product Name</h2>
+                        <p>Product Name</p>
+                        <p>$10.99</p>
+                    </div>
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container'>
+                            <img src="http://lorempixel.com/250/250/food/3">
+                        </div>
+                        <h2>Product Name</h2>
+                        <p>Product Name</p>
+                        <p>$10.99</p>
+                    </div>
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container'>
+                            <img src="http://lorempixel.com/250/250/food/2">
+                        </div>
+                        <h2>Product Name</h2>
+                        <p>Product Name</p>
+                        <p>$10.99</p>
+                    </div>
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container'>
+                            <img src="http://lorempixel.com/250/250/food/4">
+                        </div>
+                        <h2>Product Name</h2>
+                        <p>Product Name</p>
+                        <p>$10.99</p>
+                    </div>
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container'>
+                            <img src="http://lorempixel.com/250/250/food/1">
+                        </div>
+                        <h2>Product Name</h2>
+                        <p>Product Name</p>
+                        <p>$10.99</p>
+                    </div>
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container'>
+                            <img src="http://lorempixel.com/250/250/food/6">
+                        </div>
+                        <h2>Product Name</h2>
+                        <p>Product Name</p>
+                        <p>$10.99</p>
+                    </div>
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container'>
+                            <img src="http://lorempixel.com/250/250/food/3">
+                        </div>
+                        <h2>Product Name</h2>
+                        <p>Product Name</p>
+                        <p>$10.99</p>
+                    </div>
+                    <div class="col col-xs-12 col-md-6 col-lg-4 item">
+                        <div class='img-container'>
+                            <img src="http://lorempixel.com/250/250/food/5">
+                        </div>
+                        <h2>Product Name</h2>
+                        <p>Product Name</p>
+                        <p>$10.99</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col col-sm-3 col-xs-6">
+                <div id='cart-container' data-spy="affix" data-offset-top="10">
+                    <h1>Shopping Cart <span class="badge" id='cartItems'></span></h1>
+                    <div class="cart" id='cart'>
+                        So lonely here, add something
+                    </div>
+                    <div id='prices'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Complete order</h4>
+                </div>
+                <div class="modal-body">
+                    <div class='row'>
+                        <div class='col-xs-12' id='cartContentsModal'> </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-12' id='cartForm'>
+                            <!-- FORM -->
+                            <form>
+                                <div class="form-group">
+                                    <label for="formName">Name</label>
+                                    <input type="text" class="form-control" id="formName" placeholder="Your name"
+                                        required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="formAddress">Address</label>
+                                    <input type="text" class="form-control" id="formAddress" placeholder="Your address"
+                                        required>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer centered">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id='submit'>Complete order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ingredient -->
+    <div class="modal fade" id="ingredient" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Complete order</h4>
+                </div>
+                <div class="modal-body">
+                    <div class='row'>
+                        <div class='col-xs-12' id='cartContentsModal'> </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-12' id='cartForm'>
+                            <!-- FORM -->
+                            <form>
+                                <h3>Select your favorite Topp:</h3>
+                                <label>
+                                    <input type="checkbox" id='checkbox1' onclick="counter(this)" value="football"
+                                        name="sport"> Football
+                                    <span style="display:none">
+                                        <input type="button" id="1" value="0" />
+                                        <input type="button" onclick="incrementValue(this)" value="➕" />
+                                        <input type="button" onclick="decrementValue(this)" value="➖ " />
+                                    </span>
+                                </label>
+                                <br>
+                                <label>
+                                    <input type="checkbox" id='checkbox2' onclick="counter(this)" value="baseball"
+                                        name="sport"> Baseball
+                                    <span style="display:none">
+                                        <input type="button" id="2" value="0" />
+                                        <input type="button" onclick="incrementValue(this)" value="➕" />
+                                        <input type="button" onclick="decrementValue(this)" value="➖ " />
+                                    </span>
+                                </label>
+
+                                <br>
+                                <label>
+                                    <input type="checkbox" id='checkbox6' value="cricket" onclick="counter(this)"
+                                        name="sport"> Cricket
+                                    <span style="display:none">
+                                        <input type="button" id="6" value="0" />
+                                        <input type="button" onclick="incrementValue(this)" value="➕" />
+                                        <input type="button" onclick="decrementValue(this)" value="➖ " />
+                                    </span>
+                                </label>
+                                <br>
+                                <label>
+                                    <input type="checkbox" id='checkbox3' value="boxing" onclick="counter(this)"
+                                        name="sport"> Boxing
+                                    <span style="display:none">
+                                        <input type="button" id="3" value="0" />
+                                        <input type="button" onclick="incrementValue(this)" value="➕" />
+                                        <input type="button" onclick="decrementValue(this)" value="➖ " />
+                                    </span>
+                                </label>
+                                <br>
+                                <label>
+                                    <input type="checkbox" value="racing" id='checkbox4' name="sport"> Racing
+                                    <span style="display: none;">
+
+                                        <input type="button" id="4" value="0" />
+                                        <input type="button" onclick="incrementValue(this)" value="➕" />
+                                        <input type="button" onclick="decrementValue(this)" value="➖ " />
+                                    </span>
+                                </label>
+                                <br>
+                                <label>
+                                    <input type="checkbox" value="swimming" name="sport"> Swimming
+                                    <input type="button" id="5" value="0" />
+                                    <input type="button" onclick="incrementValue(this)" value="➕" />
+                                    <input type="button" onclick="decrementValue(this)" value="➖ " />
+                                </label>
+
+                                <br>
+                                <button type="button">Get Values</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer centered">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id='submit2'>Complete order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script>
+        var itemsInCart = 0;
+        var subTotal = 0;
+        const tax = 0.1;  // 10%
+        var totalPrice = 0;
+        console.log($('#genOffer')[0].getAttribute('data-min'))
+
+
+        window.onload = function () {
+            $('img').addClass('img-responsive');
+            var count = 1
+            $('.img-container').append('<button class="btn btn-success btn-add-cart"><span class="glyphicon glyphicon-shopping-cart"></span> to cart</button>');
+
+            $('.btn-add-cart').click((e) => {
+                //animation
+                $(e.target).animateCss('pulse');
+                // find out which item is clicked
+                // if 'span' with cart symbol is clicked, then navigate one level up to the button
+                let eventTarget;
+                if ($(e.target).is('span')) eventTarget = $(e.target).parent();
+                else eventTarget = $(e.target);
+                let itemName = eventTarget.parent().parent().find('h2')[0].textContent;
+                let itemPrice = eventTarget.parent().parent().find('p')[1].textContent;
+                let dataId = eventTarget.parent()[0].getAttribute('data-id')//.find('data-id').textContent;
+                console.log(dataId)
+                addOffer(dataId)
+                addToCart(itemName, itemPrice, count, dataId);
+                count++
+            });
+
+            $('#submit').click(() => {
+                formSubmitted();
+            });
+
+            setRandomPrices();
+        }
+        var dict = {};
+
+        function addOffer(dataId) {
+            if (dataId in dict) {
+                dict[dataId] += 1
+                console.log(dict[dataId])
+            }
+            else {
+                dict[dataId] = 1
+                console.log(dict[dataId])
+            }
+
+        }
+
+        function setRandomPrices() {
+            // just for fun
+            let items = document.querySelectorAll('.item');
+            for (let item of items) {
+                $(item).find('p')[1].textContent = '$' + (Math.floor(Math.random() * (199 - 0)) + 0) + '.' + (Math.floor(Math.random() * (99 - 10)) + 10);
+            }
+        }
+
+        function addToCart(name, price, count, dataId) {
+            let priceNumber = parseFloat(price.slice(1));
+            if (itemsInCart === 0) $('#cart').text(" ");
+            let newDiv = $('<div class="cart-item"></div>');
+            newDiv.text(name + ' ... ' + price + ' ');
+            newDiv.append('<button class="btn btn-danger btn-xs" onclick="deleteItem(this)">X</button>');
+            newDiv.append(`<br><input type = 'button' id="nos${count}" value = '1'> Nos</input>
+                <button class="btn" onclick="incrementNos(this)">+</button>
+                <button class="btn" onclick="decrementNos(this)">-</button>`);
+            newDiv.append('<br>');
+            newDiv.append('<button class="btn btn-black btn-xs" onclick="openIngredient(this)">Ingredient</button>');
+            newDiv.attr('name', name);
+            newDiv.attr('id', name + dataId);
+            newDiv.attr('price', priceNumber);
+            $('#cart').append(newDiv);
+            $('#cart').append('<hr>');
+            newDiv.animateCss('bounceInRight');
+            itemsInCart++;
+            $('#cartItems').text(itemsInCart);
+            subTotal += priceNumber;
+            updatePrice();
+            // to add toppings
+            // openIngredient()
+        }
+
+        function deleteItem(e) {
+            subTotal -= ingredientsDel(e)
+            let price = $(e.parentElement).attr('price');
+            let nos = $(e.nextSibling.nextSibling).attr('value');
+            console.log(nos)
+            subTotal -= parseFloat(price) * parseFloat(nos);
+            $(e.parentElement).animateCss('bounceOutRight');
+            $(e.parentElement).remove();
+            itemsInCart--;
+            $('#cartItems').text(itemsInCart);
+            updatePrice();
+            cartLonelyText();
+        }
+        function ingredientsDel(e) {
+            let id = $(e.parentElement).attr('id');
+            var totPrice = 0
+            var testimonials = $(".ingredient" + id);
+            for (var i = 0; i < testimonials.length; i++) {
+                // Using $() to re-wrap the element.
+                console.log(testimonials[i].getAttribute('price'))
+                totPrice += parseFloat(testimonials[i].getAttribute('price'))
+            }
+            return totPrice
+        }
+        function cartLonelyText() {
+            if (itemsInCart === 0)
+                $('#cart').append('So lonely here, add something');
+        }
+
+        function updatePrice() {
+            $('#prices').empty();
+            if (itemsInCart === 0) return;
+            let newDiv = $('<br><br><div></div>');
+            newDiv.append('<strong>Subtotal: $' + subTotal.toFixed(2) + '<br>');
+            newDiv.append('<strong>Tax: ' + tax * 100 + '%<br>');
+            newDiv.append('<strong>Total Price: $' + (subTotal + (subTotal * tax)).toFixed(2) + '</strong>');
+
+            newDiv.append('<button class="btn btn-info btn-block" onclick="openModal()">Continue</button>');
+
+            $('#prices').append(newDiv);
+            newDiv.animateCss('bounceInRight');
+        }
+
+
+        function cartToString() {
+            let itemsString = "<strong>Your order(main products):</strong><br>";
+            let cartItems = document.querySelectorAll('.cart-item');
+            for (let item of cartItems) {
+                itemId = item.getAttribute('id')
+                let ingredients = document.querySelectorAll('.ingredient' + itemId);
+                let ingredientString = "<strong>ingredients</strong><br>";
+                for (let ingredient of ingredients) {
+                    ingredientString = ingredientString + ingredient.getAttribute('name') + " .. $" + ingredient.getAttribute('price') + "<br>";
+                };
+                itemsString = '<strong>' + itemsString + item.getAttribute('name') + '<strong>' + " .. $" + item.getAttribute('price') + "<br>";
+                itemsString = itemsString + ingredientString + '<br>';
+            };
+            itemsString += '</p><p>Subtotal: $' + subTotal.toFixed(2) + '<br>';
+            itemsString += 'Tax: ' + tax * 100 + '%<br>'
+            itemsString += 'Total price with tax: <mark><strong>$' + (subTotal + (subTotal * tax)).toFixed(2) + '</strong></mark></p></small>';
+            return itemsString
+        }
+
+        function openModal() {
+            $('#cartContentsModal').html(cartToString());
+            $('#myModal').modal('show');
+
+        }
+
+        var parentId
+        function openIngredient(ele) {
+            $(ele).hide()
+            parentId = $(ele).parent().attr('id')
+            console.log(parentId)
+            $('#ingredient').modal('show');
+        }
+        // $('#cartContentsModal').html(cartToString());
+        $('#submit2').click(() => {
+            console.log(parentId)
+            let [val, id, quantity] = ingredients()
+            addIngredientToCart(parentId, val, id, quantity)
+            // console.log(val, id, quantity, checkboxes)
+            $('#ingredient').modal('hide');
+        });
+
+        function ingredients() {
+            var val = []
+            var id = []
+            var quantity = []
+            var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+            console.log(checkboxes)
+            for (var i = 0; i < checkboxes.length; i++) {
+                val.push(checkboxes[i].value)
+                quantity.push($(checkboxes[i]).next().children().first().attr('value'));
+                id.push(checkboxes[i].id);
+                console.log(val, id)
+            }
+            return [val, id, quantity]
+        }
+
+
+        function addIngredientToCart(parentId, name, id, quantity) {
+            for (let i = 0; i < name.length; i++) {
+                let priceNumber = parseFloat(quantity[i]);
+                let newDiv = $('<div class="ingredient' + parentId + '"></div>');
+                newDiv.append(name[i] + ' ... ' + quantity[i] + ' ');
+                newDiv.append('<br>');
+                newDiv.attr('name', name[i]);
+                newDiv.attr('id', name[i] + quantity[i]);
+                newDiv.attr('price', quantity[i]);
+                $('#' + parentId).append(newDiv);
+                newDiv.animateCss('bounceInRight');
+                subTotal += priceNumber
+                updatePrice()
+            }
+        };
+        function counter(elem) {
+            if ($(elem).is(':checked')) {
+                $(elem).next().show();
+            } else $(elem).next().hide();
+        }
+
+        function incrementValue(elem) {
+            var id = $(elem).prev().attr('id'); // get previous sibling id
+            console.log(id)
+            var value = parseInt(document.getElementById(id).value, 10);
+            value = isNaN(value) ? 1 : value;
+            value++;
+            document.getElementById(id).value = value;
+        }
+
+        function decrementValue(elem) {
+            var id = $(elem).prev().prev().attr('id');
+            var value = parseInt(document.getElementById(id).value, 10);
+            value = isNaN(value) ? 1 : value;
+            value--;
+            if (value < 1) value = 1
+            document.getElementById(id).value = value;
+        }
+        function incrementNos(elem) {
+            var id = $(elem).prev().attr('id'); // get previous sibling id
+            var dataId = $(elem).parent().attr('id'); // get previous sibling id
+            console.log(dataId)
+            var value = parseInt(document.getElementById(id).value, 10);
+            value = isNaN(value) ? 1 : value;
+            value++;
+            document.getElementById(id).value = value;
+            let price = $(elem.parentElement).attr('price');
+            console.log(price)
+            subTotal += parseFloat(price);
+            updatePrice();
+        }
+
+        function decrementNos(elem) {
+            var id = $(elem).prev().prev().attr('id');
+            var value = parseInt(document.getElementById(id).value, 10);
+            value = isNaN(value) ? 1 : value;
+            if (value > 1) {
+                value--;
+                document.getElementById(id).value = value;
+                let price = $(elem.parentElement).attr('price');
+                subTotal -= parseFloat(price);
+                updatePrice();
+            }
+        }
+
+
+        function formSubmitted() {
+            if (!checkEmptyFields()) {    // if the fields arent empty
+                sweetAlert("Thanks!", "Thanks for your order! We will contact you for more information", "success");
+            } else { return; }
+            // clear cart and do other cleaning if order is OK
+            $('#myModal').modal('hide');
+            totalPrice = 0; subTotal = 0; itemsInCart = 0;
+            $('#cart').empty();
+            $('#prices').empty();
+            $('#cartItems').text(itemsInCart);
+            cartLonelyText();
+        }
+
+        function checkEmptyFields() {
+            let somethingEmpty = false;
+
+            if (!$.trim($('#formName').val()).length) {
+                $('#formName').animateCss('animated jello');
+                somethingEmpty = true;
+            }
+
+            if (!$.trim($('#formAddress').val()).length) {
+                $('#formAddress').animateCss('animated jello');
+                somethingEmpty = true;
+            }
+
+            return somethingEmpty;
+        }
+
+        $.fn.extend({
+            //    https://github.com/daneden/animate.css
+            animateCss: function (animationName) {
+                var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                this.addClass('animated ' + animationName).one(animationEnd, function () {
+                    $(this).removeClass('animated ' + animationName);
+                });
+                return this;
+            }
+        });
+
+    </script>
+</body>
+
+</html>
