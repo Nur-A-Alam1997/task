@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse,JsonResponse
 
 posts = [
     {
@@ -20,10 +21,11 @@ def home(request):
     context = {
         'posts': posts
     }
-    return render(request, 'blog/home.html', context)
+    # return render(request, 'blog/home.html', context)
+    return JsonResponse({"ole":"home"})
+
 
 
 def about(request):
-    return render(request, 'blog/about.html', {'title': 'About'})from django.shortcuts import render
-
-# Create your views here.
+    # return render(request, 'blog/about.html', {'title': 'About'})
+    return JsonResponse({"ole":"about"})
