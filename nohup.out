@@ -1,0 +1,19 @@
+Collecting pyngrok
+  Downloading pyngrok-5.1.0.tar.gz (745 kB)
+Requirement already satisfied: PyYAML in /usr/local/lib/python3.7/dist-packages (from pyngrok) (3.13)
+Building wheels for collected packages: pyngrok
+  Building wheel for pyngrok (setup.py): started
+  Building wheel for pyngrok (setup.py): finished with status 'done'
+  Created wheel for pyngrok: filename=pyngrok-5.1.0-py3-none-any.whl size=19006 sha256=3f06e4d379c81041cb7617ea8d944d3d2e0e8dca23134425ec6a6d8e7afbe547
+  Stored in directory: /root/.cache/pip/wheels/bf/e6/af/ccf6598ecefecd44104069371795cb9b3afbcd16987f6ccfb3
+Successfully built pyngrok
+Installing collected packages: pyngrok
+Successfully installed pyngrok-5.1.0
+Requirement already satisfied: pyngrok in /usr/local/lib/python3.7/dist-packages (5.1.0)
+Requirement already satisfied: PyYAML in /usr/local/lib/python3.7/dist-packages (from pyngrok) (3.13)
+Requirement already satisfied: pyngrok in /usr/local/lib/python3.7/dist-packages (5.1.0)
+Requirement already satisfied: PyYAML in /usr/local/lib/python3.7/dist-packages (from pyngrok) (3.13)
+Requirement already satisfied: pyngrok in /usr/local/lib/python3.7/dist-packages (5.1.0)
+Requirement already satisfied: PyYAML in /usr/local/lib/python3.7/dist-packages (from pyngrok) (3.13)
+Requirement already satisfied: pyngrok in /usr/local/lib/python3.7/dist-packages (5.1.0)
+Requirement already satisfied: PyYAML in /usr/local/lib/python3.7/dist-packages (from pyngrok) (3.13)

@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-ok_no!n(p0-^zl+z5x)d_ql2$v6-_eiu1y#xyn#8p2ou+rsq1f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['colab.research.google.com']
+ALLOWED_HOSTS = ['*','0121-34-73-90-8.ngrok.io']
 
-
+CSRF_COOKIE_DOMAIN = '*.ngrok.io'
 # Application definition
 
 INSTALLED_APPS = [
@@ -44,7 +44,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware', #Csrf Middleware is added
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
