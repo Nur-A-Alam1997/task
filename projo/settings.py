@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-ok_no!n(p0-^zl+z5x)d_ql2$v6-_eiu1y#xyn#8p2ou+rsq1f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','0121-34-73-90-8.ngrok.io']
-
-CSRF_COOKIE_DOMAIN = '*.ngrok.io'
+ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['ngrok.io']
+# CSRF_COOKIE_DOMAIN = ['*',"3bf9-34-73-90-8.ngrok.io"]
 # Application definition
 
 INSTALLED_APPS = [

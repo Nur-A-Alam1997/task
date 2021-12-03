@@ -17,3 +17,67 @@ Requirement already satisfied: pyngrok in /usr/local/lib/python3.7/dist-packages
 Requirement already satisfied: PyYAML in /usr/local/lib/python3.7/dist-packages (from pyngrok) (3.13)
 Requirement already satisfied: pyngrok in /usr/local/lib/python3.7/dist-packages (5.1.0)
 Requirement already satisfied: PyYAML in /usr/local/lib/python3.7/dist-packages (from pyngrok) (3.13)
+Watching for file changes with StatReloader
+Not Found: /
+[03/Dec/2021 20:23:47] "GET / HTTP/1.1" 404 2175
+Not Found: /favicon.ico
+[03/Dec/2021 20:23:48] "GET /favicon.ico HTTP/1.1" 404 2226
+Not Found: /
+[03/Dec/2021 20:23:49] "GET / HTTP/1.1" 404 2175
+[03/Dec/2021 20:24:01] "GET /admin HTTP/1.1" 301 0
+[03/Dec/2021 20:24:01] "GET /admin/ HTTP/1.1" 302 0
+[03/Dec/2021 20:24:02] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2214
+[03/Dec/2021 20:24:02] "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+[03/Dec/2021 20:24:02] "GET /static/admin/css/login.css HTTP/1.1" 200 939
+[03/Dec/2021 20:24:02] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18545
+[03/Dec/2021 20:24:02] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2271
+[03/Dec/2021 20:24:02] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+[03/Dec/2021 20:24:03] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[03/Dec/2021 20:24:03] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[03/Dec/2021 20:24:03] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+Not Found: /favicon.ico
+[03/Dec/2021 20:24:03] "GET /favicon.ico HTTP/1.1" 404 2226
+Forbidden (CSRF cookie not set.): /admin/login/
+[03/Dec/2021 20:24:07] "POST /admin/login/?next=/admin/ HTTP/1.1" 403 2870
+/content/task/projo/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 03, 2021 - 20:23:28
+Django version 3.2.9, using settings 'projo.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/content/task/projo/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 03, 2021 - 20:24:27
+Django version 3.2.9, using settings 'projo.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Forbidden (CSRF cookie not set.): /admin/login/
+[03/Dec/2021 20:24:31] "POST /admin/login/?next=/admin/ HTTP/1.1" 403 2870
+/content/task/projo/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 03, 2021 - 20:24:29
+Django version 3.2.9, using settings 'projo.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/content/task/projo/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 03, 2021 - 20:24:53
+Django version 3.2.9, using settings 'projo.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Forbidden (CSRF cookie not set.): /admin/login/
+[03/Dec/2021 20:24:58] "POST /admin/login/?next=/admin/ HTTP/1.1" 403 2870
+Forbidden (CSRF cookie not set.): /admin/login/
+[03/Dec/2021 20:25:02] "POST /admin/login/?next=/admin/ HTTP/1.1" 403 2870
