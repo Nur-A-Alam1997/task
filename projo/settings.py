@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['colab.research.google.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'blog.apps.BlogConfig'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
